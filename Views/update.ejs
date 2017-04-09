@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <base href="../"/>
+        <title>Update</title>
+    </head>
+    <body>
+        <form method="POST" action="/sua">
+            <input type="hidden" name="index" value="<%= index%>">
+            <input type="text" name="title" placeholder="title" value="<%= title%>">
+            <br/>
+            <input type="text" name="desc" placeholder="desc"  value="<%= desc%>">
+            <br/>
+            <input type="text" name="idVideo" placeholder="idVideo"  value="<%= idVideo%>">
+            <br/>
+            <input type="text" name="image" placeholder="image"  value="<%= image%>">
+            <br/>
+            <img src="images/background/<%= image%>"/>
+            <button type="submit"> Submit</button>    
+        </form>
+    </body>
+</html>

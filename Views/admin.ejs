@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Admin</title>
+</head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>STT</td>
+                <td>Title</td>
+                <td>Desc</td>
+                <td>idVideo</td>
+                <td>Hình Ảnh</td>
+                <td>Quản trị</td>
+            </tr>
+            <% mang.forEach((e,i)=> {%>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= e.title %></td>
+                    <td><%= e.desc %></td>
+                    <td><%= e.idVidel %></td>
+                    <td><img width="150" src='./images/background/<%= e.image %>'/></td>
+                    <td>
+                        <a href="/sua/<%= i+1 %>">Sửa</a>
+                        <a href="/xoa/<%= i+1 %>">Xóa</a>
+                    </td>
+                </tr>
+            <%})%>
+        </table>
+        <form action="/add" method="POST">
+            Title: <input name="title" type="text"/><br/>
+            Desc: <input name="desc" type="text"/><br/>
+            Id Video: <input name="idVideo" type="text"/><br/>
+            Image: <input name="image" type="text"/><br/>
+            <input id="submit" type="submit" value="Gửi"/><br/>
+        </form>
+    </body>
+</html>
